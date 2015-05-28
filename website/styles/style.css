@@ -27,7 +27,7 @@ ul, li {
 
 .intro section {
 	border: 2px solid #555;
-	width: 948px;
+	width: 946px;
 	margin: 100px auto 0;
 	padding: 25px;
 	text-align: left;
@@ -39,7 +39,7 @@ ul, li {
 }
 
 .intro section div {
-	width: 300px;
+	width: 346px;
 	display: inline-block;
 }
 
@@ -57,7 +57,7 @@ ul, li {
 .input form {
 	border: 2px solid #555;
 	width: 948px;
-	margin: 100px auto 0;
+	margin: 100px auto;
 	padding: 25px;
 	text-align: left;
 }
@@ -79,8 +79,12 @@ footer p {
 	display: inline-block;
 }
 
+footer a {
+	color: #fff;
+}
+
 footer ul {
-	width: 300px;
+	width: 400px;
 	display: inline-block;
 	text-align: right;
 }
@@ -91,5 +95,6 @@ footer li {
 }
 
 footer li a {
+	margin: 0 0 0 1em;
 	display: inline-block;
 }
