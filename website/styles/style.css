@@ -1,0 +1,95 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+}
+
+h1, h2, h3, p {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+.intro {
+	height: 90%;
+	text-align: center;
+}
+
+.intro h1 {
+	padding-top: 100px;
+}
+
+.intro section {
+	border: 2px solid #555;
+	width: 948px;
+	margin: 100px auto 0;
+	padding: 25px;
+	text-align: left;
+}
+
+.intro section > p {
+	width: 600px;
+	display: inline-block;
+}
+
+.intro section div {
+	width: 300px;
+	display: inline-block;
+}
+
+.input {
+	background: #ccc;
+	text-align: center;
+}
+
+.input h1 {
+	background: #555;
+	padding: 25px 0;
+	color: #fff;
+}
+
+.input form {
+	border: 2px solid #555;
+	width: 948px;
+	margin: 100px auto 0;
+	padding: 25px;
+	text-align: left;
+}
+
+footer {
+	background: #555;
+	padding: 25px 0;
+	color: #fff;
+	font-size: 16px;
+}
+
+footer div {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+footer p {
+	width: 600px;
+	display: inline-block;
+}
+
+footer ul {
+	width: 300px;
+	display: inline-block;
+	text-align: right;
+}
+
+footer li {
+	display: inline;
+	list-style-type: none;
+}
+
+footer li a {
+	display: inline-block;
+}
