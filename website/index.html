@@ -11,7 +11,7 @@
 	<h1>In Her Shoes</h1>
 
 	<div class="globe-graphic">
-		<img src="" alt="Globe Graphic">
+		<img src="" alt="Globe Graphic" id="girls">
 	</div>
 
 	<section>
@@ -566,6 +566,33 @@ $('form').submit(function(){
 		alert("Please select her country.");
 	}
 });
+
+var looper;
+var degrees = 0;
+
+function rotateAnimation(el,speed){
+	var elem = document.getElementById(el);
+
+	if(navigator.userAgent.match("Chrome")){
+		elem.style.WebkitTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("Firefox")){
+		elem.style.MozTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("MSIE")){
+		elem.style.msTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("Opera")){
+		elem.style.OTransform = "rotate("+degrees+"deg)";
+	} else {
+		elem.style.transform = "rotate("+degrees+"deg)";
+	}
+	looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')',speed);
+	degrees++;
+	if(degrees > 359){
+		degrees = 1;
+	}
+	document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
+}
+
+rotateAnimation("girls",30);
 </script>
 
 </body>
