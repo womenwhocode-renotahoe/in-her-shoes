@@ -98,3 +98,27 @@ footer li a {
 	margin: 0 0 0 1em;
 	display: inline-block;
 }
+
+// ----- GLOBE ANIMATION -----
+
+body {
+  background-color: black;
+}
+
+#earth {
+    width: 100px;
+    height: 100px;
+	background: url('http://nsidc.org/data/ease/images/details/global_spatial_coverage_map.gif');
+	border-radius: 50%;
+	background-size: 210px;
+	
+	animation-name: rotate;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes rotate {
+	from { background-position-x: 0px; }
+	to { background-position-x: 210px; }
+}
