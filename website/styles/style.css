@@ -35,6 +35,7 @@ ul, li {
 
 .intro h1 {
 	padding-top: 100px;
+	color: #FFFFFF;
 }
 
 .intro section {
@@ -142,4 +143,14 @@ body {
 @keyframes rotate {
 	from { background-position-x: 0px; }
 	to { background-position-x: 210px; }
+}
+.nextintro {
+	text-align: center;
+	color: #FFFFFF;
+	margin-top: 20px;
+}
+.firstdescription {
+	color: #FFFFFF;
+	text-align: center;
+	margin-top: -21px;
 }
