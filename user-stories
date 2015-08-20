@@ -1,0 +1,67 @@
+Through use of this website, we aspire to elicit an emotional response of empathy and affect positive change throughout the globe via contributions to charitable and political organizations.
+
+
+
+Players
+-Target User
+---Identifies as female
+---Has interest in global issues which affect women
+---Has a desire to contribute positively to women all over the globe
+---Has internet access via web browser
+---Has no age restriction
+-User Profile
+---Consists of the original demographic information entered by user
+---Includes data statistics associated with demographic information
+-Parallel Profile
+---Originates as a copy of the user profile
+---User can continually update one demographic point at a time to create the modified parallel profile
+---Includes data statistics continually updated as demographic information is updated
+-Comparison Profile
+---Pre-configured profile used to compare with a user profile
+---Representative of a particular geographic location or women's issue
+---Includes data statistics associated with demographic information
+-Organization
+---Qualified political or charitable organization centered around women's issue(s)
+---Includes verified contact information
+---Includes verified method(s) or suggestions for contributing
+-Account
+---Secure
+---Always includes one current, complete, unique User Profile
+---Saves any number of additional parallel profiles associated with a single user
+---Saves favorite organizations and associated comparison profile(s), if any
+
+Stories
+-Website Navigation
+---As a user, I want to scroll from first to second page
+---Upon form submission, current page should swipe either to the right or bottom to display the new page
+---Upon trigger of a click event, current page should swipe either to the right or bottom to display the new page
+-Profile
+---As a user, I want to be able to enter a minimum of demographic information during profile creation
+---As a user, I want to be able to enter optional demographic information during profile creation
+---As a user, I want to be directed my summary profile page after initial submission
+-Side by Side Comparison
+---As a user, I want to be able to compare my profile directly to one of many pre-built profiles via a side by side comparison
+---From the side by side comparison, I want to be able to continue choosing from available pre-built profiles to engage in additional side by side comparisons
+---As a user, I want to be able to return to my summary profile page or access the story building page with my user profile demographic information
+-Story Building
+---As a user, I want to be able to change one or multiple categories of my user profile to create and view a new parallel profile without modification to my user profile
+---As a user, I want to be able to continue modifying and viewing my parallel profile demographic information without modification to my user profile
+---As a user, I want to be able to return to my summary profile page or access the side by side comparison page with my user profile demographic information
+-Giving
+---As a user, I want to have direct access to a page listing multiple charitable and/or political organizations
+---As a user, I want to be directed to organizations which are specific to the side by side or story building comparison I built
+---As a user, I want to be able to search for relevant organizations by name, type, or focus
+---As a user, I want organization search results to provide me with all pertinent contact information or links to act on donating to organization, contacting organization, or participating in organization activities
+---As a user, I want to be able to return to my summary profile page, access the side by side comparison page or story building page with my user profile demographic information
+-Accounts
+---As a user, I want to have an option to create an account associated with my user profile
+---As a user, I want to be able to access my secure account using a unique and secure username/password combination
+---As a user, I want to be able to access my summary profile page from my account
+---As a user, I want to be able to update my demographic information from my account
+---As a user, I want to  be able to save multiple parallel "what if" profiles to my account
+---As a user, I want to be able to indicate and save my favorite organization(s) to my account
+-Future Features
+---As a user, I want to access this app on a mobile device
+---If a user attempts to navigate back in the website, page(s) should swipe in the opposite direction of previous page(s) navigation
+---As a user, I want my payment information securely stored for future donations
+---As a user, I want access to news related to my favorite organizations, women's issue, or geographical locations
