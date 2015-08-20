@@ -57,7 +57,6 @@ ul, li {
 }
 
 .input {
-	
 	text-align: center;
 	background: #FAA190; /* Old browsers */
 	background: -moz-radial-gradient(center, ellipse cover,  #FAA190 0%, #FA8B62 100%); /* FF3.6+ */
@@ -66,8 +65,7 @@ ul, li {
 	background: -o-radial-gradient(center, ellipse cover,  #FAA190 0%,#FA8B62 100%); /* Opera 12+ */
 	background: -ms-radial-gradient(center, ellipse cover,  #FAA190 0%,#FA8B62 100%); /* IE10+ */
 	background: radial-gradient(ellipse at center,  #FAA190 0%,#FA8B62 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FAA190', endColorstr='#FA8B62',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FAA190', endColorstr='#FA8B62',GradientType=1 );
 }
 
 .input h1 {
@@ -153,4 +151,23 @@ body {
 	color: #FFFFFF;
 	text-align: center;
 	margin-top: -21px;
+}
+.girls {
+}
+.NAV {
+	color: #FFFFFF;
+	text-decoration: none;
+	list-style-type: none;
+}
+.NAV li {
+	display: inline;
+	float: left;
+}
+.intro .NAV li {
+	display: inline;
+}
+.intro .NAV li {
+}
+.intro .NAV li {
+	display: block;
 }
