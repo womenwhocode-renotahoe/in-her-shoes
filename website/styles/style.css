@@ -158,10 +158,13 @@ body {
 	color: #FFFFFF;
 	text-decoration: none;
 	list-style-type: none;
+	display: inline;
+	text-align: center;
 }
 .NAV li {
 	display: inline;
-	float: left;
+	padding-left: 8px;
+	padding-right: 8px;
 }
 .intro .NAV li {
 	display: inline;
