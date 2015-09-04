@@ -1,38 +1,35 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>In Her Shoes</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<link href="../styles/style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
 
 <section class="intro">
-	<h1>It's a big world</h1>
-    <img src="../../graphics/Globe_w_clouds.png" width="460" height="300" alt=""/>
-<!---<div class="globe-graphic">
+	<h1>It's a big world.</h1>
+    <img src="{{ url_for('static', filename='images/Globe_w_clouds.png/') }}" alt="Globe" style="width:460px;height:300px;"/>
+<!--<div class="globe-graphic">
   
 	  <img src="" alt="Globe Graphic" id="girls">
-	</div>--->
+	</div>-->
 <h2 class="nextintro">So what's it like?</h2>
-<h5 class="firstdescription">to have a different parent, a different address, a different life?</h5> 
-<nav class="NAV">
-<li>Home</li>
-<li>about</li>
-<li>be a girl</li>
-<li>give</li>
-</nav>
-<img src="../../graphics/girls.png" alt="" width="644" height="212" class="girls"/>
+<h5 class="firstdescription">to have a different parent, a different address, a different education, a different life?</h5> 
+<!-- Insert buttons here-->
+<h4>
+	<a href="{{ url_for('index') }}" class="btn btn-default">home</a>
+	<a href="{{ url_for('about') }}" class="btn btn-default">about</a>
+	<a href="{{ url_for('beagirl') }}" class="btn btn-default">be a girl</a>
+	<a href="{{ url_for('give') }}" class="btn btn-default">give</a>
+</h4>
+
+<img src="{{ url_for('static', filename='images/girls.png/') }}" alt="Girls" style="width:644px;height:212px;" class="girls"/>
 
 </section>
 
-<!---<section>
+<!--<section>
 	  <p>About text goes here
 	  </p><div class="twitter-timeline">
 		  <p>View our latest Tweets!</p>
 		</div>
 	</section>
-   ---> 
+   --> 
     
 
 
@@ -553,17 +550,6 @@
 	</div>
 </section>
 
-<footer>
-	<div>
-		<p>&copy; 2015 <a href="http://www.womenwhocode.com">Women Who Code Reno-Tahoe</a>
-		</p><ul>
-			<li><a href="">Twitter</a></li>
-			<li><a href="">Facebook</a></li>
-			<li><a href="">Email</a></li>
-		</ul>
-	</div>
-</footer>
-
 <script>
 $('form').submit(function(){
 	var local = document.getElementById('local_country');
@@ -609,5 +595,4 @@ function rotateAnimation(el,speed){
 rotateAnimation("girls",30);
 </script>
 
-</body>
-</html>
+{% endblock %}
