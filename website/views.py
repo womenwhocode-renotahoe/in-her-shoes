@@ -6,7 +6,6 @@ def not_found_error(error):
     return render_template('404.html'), 404
 
 @website.route('/')
-@website.route('/index')
 def index():
     return render_template('index.html')
 
