@@ -93,6 +93,8 @@ ul, li {
 	background: -ms-radial-gradient(center, ellipse cover,  #FAA190 0%,#FA8B62 100%); /* IE10+ */
 	background: radial-gradient(ellipse at center,  #FAA190 0%,#FA8B62 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FAA190', endColorstr='#FA8B62',GradientType=1 );
+    padding-top: 2cm;
+    padding-bottom: 2cm;
 }
 
 .input h1 {
@@ -107,6 +109,14 @@ ul, li {
 	margin: 100px auto;
 	padding: 25px;
 	text-align: left;
+}
+
+.form_input {
+	font-weight: bold;
+	font-size: 1em;
+	padding: 0.1em 1em 0.1em 1em;
+	margin: 0.8em;
+	border-radius: 1em;
 }
 
 .navbar-left img {

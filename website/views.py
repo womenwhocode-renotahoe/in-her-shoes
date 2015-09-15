@@ -1,4 +1,4 @@
-from flask import render_template, url_for
+from flask import render_template
 from website import website
 
 @website.errorhandler(404)
@@ -25,3 +25,7 @@ def give():
 @website.route('/contact')
 def contact():
     return render_template('contact.html')
+
+@website.route('/two_girls')
+def two_girls():
+    return render_template('two_girls.html')
