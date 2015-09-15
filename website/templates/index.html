@@ -39,12 +39,12 @@
 	<form>
 		<div>
 			<label for="age">How old are you?</label>
-			<input type="number" id="age" min="10" max="99" step="1" required>
+			<input class="form_input" type="number" id="age" min="10" max="99" step="1" required>
 		</div>
 
 		<div>
 			<label for="local_country">Where do <span>you</span> live?</label>
-			<select id="local_country" required>
+			<select class="form_input" id="local_country" required>
 				<option value="0">-- Select a country --</option>
 				<option value="us">United States</option>
 				<option value="af">Afghanistan</option>
@@ -294,7 +294,7 @@
 
 		<div>
 			<label for="remote_country">Where does <span>she</span> live?</label>
-			<select id="remote_country" required>
+			<select class="form_input" id="remote_country" required>
 				<option value="0">-- Select a country --</option>
 				<option value="us">United States</option>
 				<option value="af">Afghanistan</option>
@@ -542,12 +542,11 @@
 			</select>
 		</div>
 
-		<input type="submit" value="Explore">
+		<input class="btn btn-default" type="submit" value="Explore">
 	</form>
 
-	<div class="girls-graphic">
-		<img src="" alt="Girls Graphic">
-	</div>
+	<img src="{{ url_for('static', filename='images/Globe_w_clouds.png/') }}" alt="Globe" style="width:460px;height:300px;"/>
+
 </section>
 
 <script>
