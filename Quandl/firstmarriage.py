@@ -1,6 +1,6 @@
 '''Generates the list of country codes, grabs the corresponding data from 
-the web and prints the table of marriage age for each country as far back 
-as 2005.'''
+the web and prints the table of marriage age for each country no later than 
+2005.'''
 
 import pandas as pd
 import os
