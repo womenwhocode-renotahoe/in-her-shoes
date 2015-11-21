@@ -1,17 +1,17 @@
-'''Generates the list of country codes, grabs the corresponding data from 
-the web and prints the table of marriage age for each country no later than 
-2005.'''
+'''Generates the list of country codes, grabs the corresponding data from the 
+web and prints the table of women's average first marriage age for each country.'''
 
 import pandas as pd
 import os
 from Quandl import Quandl
 import time
 import requests
+import json
 
-auth_token = 'eVv_a2tQw8n-vmEVbcam'
+auth_token = 'eVv_a2tQw8n-vmEVbcam' # Personal authentication token for Kelsey's account, replace if needed
 
 '''
-Countries listed in Quandl dataset are:
+Countries listed in Quandl dataset of women's age at first marriage are:
 1. Afghanistan
 2. Albania
 3. Algeria
@@ -200,9 +200,6 @@ Countries listed in Quandl dataset are:
 186. Zimbabwe
 '''
 
-'WORLDBANK/AFG_SP_DYN_SMAM_FE.1'
-
-# N.B. #4 Angola, #87 Kosovo, #150 Somalia showed up as n/a, no data so not in this array
 country_keys = []
 
 def form_dictionary():
@@ -222,9 +219,28 @@ def form_dictionary():
     return x
 
 for key in form_dictionary():
-    data_string = 'WORLDBANK/' + key + '_SP_DYN_SMAM_FE.1'
+    data_string = 'WORLDBANK/' + key + '_SP_DYN_SMAM_FE' # format of the data on Quandl database
     country_keys.append(data_string)
 
-firstmarriage = Quandl.get(country_keys, authtoken=auth_token, trim_start='2005-12-12')
+'''
+# Test data - Afghanistan, Albania, Algeria, Antigua and Barbada, Argentina, USA, Channel Islands (Channel Islands not in database)
+test_country_keys = ['WORLDBANK/AFG_SP_DYN_SMAM_FE', 'WORLDBANK/ALB_SP_DYN_SMAM_FE', 'WORLDBANK/DZA_SP_DYN_SMAM_FE', 'WORLDBANK/ATG_SP_DYN_SMAM_FE', 'WORLDBANK/ARG_SP_DYN_SMAM_FE', 'WORLDBANK/USA_SP_DYN_SMAM_FE', 'WORLDBANK/CHI_SP_DYN_SMAM_FE']
+firstmarriage = Quandl.get(test_country_keys, authtoken=auth_token, order='desc')
+'''
 
-print(firstmarriage)
+firstmarriage = Quandl.get(country_keys, authtoken=auth_token, order='desc')
+
+firstmarriage_trimmed = {} # type is dict, no longer pandas DataFrame - DataFrame doesn't allow me to strip out null values, must be even matrix
+for key in firstmarriage:
+    if key[-9:] == 'NOT FOUND': # skipping the countries we have no data for
+        continue
+    trimmed_data = firstmarriage[key].dropna() # removes the null values from the series
+    country_longform = key[10:13]
+    trimmed_data.name = form_dictionary()[country_longform] # Name attribute is now human readable country, note that name goes below corresponding data
+    firstmarriage_trimmed[key] = trimmed_data # forming a new dict with the trimmed series
+
+f = open('marriage', 'w')
+f.write(str(firstmarriage_trimmed))
+f.close()
+
+# TODO: Remove extraneous Name, dtype entries from the dataset
