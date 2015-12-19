@@ -209,6 +209,10 @@ def form_dictionary():
     country_codes_split = country_codes.splitlines()
     country_array = []
 
+    '''
+    # variable names need to be changed
+    '''
+
     for a in country_codes_split:
         if a != '' and a != 'COUNTRY|CODE': # removing heading and blank lines
             l = a.split('|')
